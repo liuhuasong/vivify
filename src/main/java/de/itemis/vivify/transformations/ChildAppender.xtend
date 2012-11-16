@@ -10,7 +10,7 @@ class ChildAppender implements Transformation {
 	
 	NodeLoader children 
 
-	override mould(Element root) {
+	override transform(Element root) {
 		newArrayList(root.appendChildren(children.load(root)))
 	}
 	

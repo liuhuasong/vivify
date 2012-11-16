@@ -10,7 +10,7 @@ class Prepender implements Transformation {
 	
 	NodeLoader value 
 
-	override mould(Element sibbling) {
+	override transform(Element sibbling) {
 		(value.load(sibbling.parent) + newArrayList(sibbling)).toList
 	}
 	

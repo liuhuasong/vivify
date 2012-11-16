@@ -10,7 +10,7 @@ class ChildPrepender implements Transformation {
 	
 	NodeLoader children 
 
-	override mould(Element root) {
+	override transform(Element root) {
 		newArrayList(root.prependChildren(children.load(root)))
 	}
 	

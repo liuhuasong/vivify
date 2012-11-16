@@ -5,7 +5,7 @@ import org.jsoup.nodes.Element
 
 @Data
 class Remover implements Transformation {
-	override mould(Element input) {
+	override transform(Element input) {
 		newArrayList
 	}
 }

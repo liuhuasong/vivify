@@ -1,12 +1,15 @@
 package de.itemis.vivify.util
 
+import com.google.common.base.Charsets
+import com.google.common.io.Resources
 import java.util.List
+import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 import org.jsoup.nodes.Node
-import org.jsoup.parser.Parser
-import com.google.common.io.Resources
-import com.google.common.base.Charsets
 
+/**
+ * Useful extensions to the Jsoup library that you can use to build your own transformations
+ */
 class JsoupExtensions {
 
 	/**
@@ -59,7 +62,7 @@ class JsoupExtensions {
 	
 	def static loadDoc(String path) {
 		val url = typeof(JsoupExtensions).getResource(path)
-		Parser::parseBodyFragment(
+		Jsoup::parse(
 			Resources::toString(url, Charsets::UTF_8), "#"
 		)
 	}

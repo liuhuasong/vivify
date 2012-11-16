@@ -1,0 +1,48 @@
+.page-frame {
+  margin:auto;
+  min-width: 520px;
+  min-height: 400px;
+  max-width: 960px;
+}
+
+.page-header {
+  margin: 10px 0px;
+}
+
+.page-mid {
+  position: relative;
+  width: 100%;
+}
+
+.page-footer {
+  height: 50px;
+  margin: 10px 0px;
+}
+
+.sidebar-left {
+  position: absolute;
+  width: 160px;
+}
+
+.sidebar-right {
+  position: absolute;
+  right: 0;
+  width: 160px;
+}
+
+.main-content {
+  margin: 0px 160px;
+  padding: 0 20px;
+}
+
+.odd {
+	background-color: #ccc;
+}
+
+.even {
+	background-color: #fff;
+}
+
+.first {
+	color: red;
+}

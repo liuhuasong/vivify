@@ -10,7 +10,7 @@ class ContentReplacer implements Transformation {
 	
 	NodeLoader children 
 
-	override mould(Element root) {
+	override transform(Element root) {
 		root.html("")
 		newArrayList(root.appendChildren(children.load(root)))
 	}

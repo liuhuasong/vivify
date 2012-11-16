@@ -10,7 +10,7 @@ class Appender implements Transformation {
 	
 	private NodeLoader value 
 	
-	override mould(Element sibbling) {
+	override transform(Element sibbling) {
 		(newArrayList(sibbling) + value.load(sibbling.parent)).toList
 	}
 	

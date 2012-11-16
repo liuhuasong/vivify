@@ -6,7 +6,7 @@ import org.jsoup.nodes.Element
 @Data
 class Nop implements Transformation {
 
-	override mould(Element input) {
+	override transform(Element input) {
 		newArrayList(input);
 	}
 }

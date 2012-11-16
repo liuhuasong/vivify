@@ -8,13 +8,13 @@ import static extension de.itemis.vivify.util.JsoupExtensions.*
 @Data
 class AttributeModifier implements Transformation {
 	
-	String name
-	(String)=>String modifier
+	CharSequence name
+	(String)=>CharSequence modifier
 
-	override mould(Element input) {
-		val old = input.attr(name)
+	override transform(Element input) {
+		val old = input.attr(name.toString)
 		val updated = modifier.apply(old)
-		input.setOrRemoveAttr(name, updated)
+		input.setOrRemoveAttr(name.toString, updated.toString)
 		newArrayList(input)
 	}
 	

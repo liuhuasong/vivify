@@ -9,7 +9,7 @@ class Replacer implements Transformation {
 	
 	NodeLoader value
 
-	override mould(Element context) {
+	override transform(Element context) {
 		value.load(context.parent)
 	}
 	
