@@ -1,4 +1,4 @@
-package de.itemis.vivify.example
+package de.itemis.vivify.example.currency
 
 import de.itemis.vivify.Snippet
 import java.util.Currency
@@ -8,7 +8,7 @@ import static extension de.itemis.vivify.util.MoreIterables.*
 
 class CurrencyTable extends Snippet {
 	new(Iterable<Currency> currencies) {
-		super("/currencies.html", "body")
+		super("/currency/currencies.html", "body")
 		transform 
 		=> sub [
 			select("tbody")
@@ -28,7 +28,7 @@ class CurrencyTable extends Snippet {
 
 abstract class Row extends Snippet {
 	new(Currency currency, int indexOfSampleRow) {
-		super("/currencies.html", '''#currencies tbody tr:eq(«indexOfSampleRow»)''')
+		super("/currency/currencies.html", '''#currencies tbody tr:eq(«indexOfSampleRow»)''')
 		transform => sub [
 			select("td:eq(0)") => text(currency.currencyCode)
 			select("td:eq(1)") => text(currency.defaultFractionDigits.toString)

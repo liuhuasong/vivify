@@ -1,15 +1,15 @@
-package de.itemis.vivify.example
+package de.itemis.vivify.example.currency
 
-import de.itemis.vivify.NodeLoader
 import de.itemis.vivify.Template
+import java.util.Currency
 
 import static extension de.itemis.vivify.transformations.Transformations.*
 
-class LayoutPage extends Template {
+class CurrencyPage extends Template {
 	
-	new(NodeLoader content) {
+	new(Iterable<Currency> currencies) {
 		super("/layout.html")
-		select(".main-content") =>  replaceContent(content) 
+		select(".main-content") =>  replaceContent(new CurrencyTable(currencies)) 
 		select(".page-header") => text("CurrencyPage")
 		select(".sidebar-left") => text("I could be your menu")
 		select(".sidebar-right") 
