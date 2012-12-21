@@ -15,6 +15,7 @@ class VivifyTest {
 		val table = new CurrencyTable(currencies)
 		val document = new LayoutPage(table).render
 		val expected = "/expectedOutput.html".loadDoc
+		println(document)
 		XMLUnit::setIgnoreWhitespace(true)
 		assertXMLEqual(expected.html, document.html)
 	}

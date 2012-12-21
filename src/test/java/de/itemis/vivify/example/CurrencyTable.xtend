@@ -8,8 +8,9 @@ import static extension de.itemis.vivify.util.MoreIterables.*
 
 class CurrencyTable extends Snippet {
 	new(Iterable<Currency> currencies) {
-		super("/currencies.html", "#currencies")
-		transform => sub [
+		super("/currencies.html", "body")
+		transform 
+		=> sub [
 			select("tbody")
 			=> replaceContent(
 				currencies.toNodes[currency, i|

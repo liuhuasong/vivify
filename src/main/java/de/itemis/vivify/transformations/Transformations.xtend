@@ -124,6 +124,12 @@ class Transformations {
 	}
 	
 	/**
+	 * Wraps the input element with <tag></tag>
+	 */
+	def static wrap(CharSequence tag) {
+		new Wrapper(tag)
+	}
+	/**
 	 * Allows you transform many objects into DOM nodes, 
 	 * probably using different snippets depending on the object itself 
 	 * or its index in the iterable.

@@ -6,6 +6,7 @@ import java.util.List
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 import org.jsoup.nodes.Node
+import org.jsoup.nodes.Entities$EscapeMode
 
 /**
  * Useful extensions to the Jsoup library that you can use to build your own transformations
@@ -62,9 +63,11 @@ class JsoupExtensions {
 	
 	def static loadDoc(String path) {
 		val url = typeof(JsoupExtensions).getResource(path)
-		Jsoup::parse(
+		val doc = Jsoup::parse(
 			Resources::toString(url, Charsets::UTF_8), "#"
 		)
+		doc.outputSettings.escapeMode(EscapeMode::xhtml)
+		doc
 	}
 	
 }
