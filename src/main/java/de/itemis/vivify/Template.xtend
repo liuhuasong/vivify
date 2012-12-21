@@ -23,7 +23,7 @@ abstract class Template {
 	/**
 	 * Selects all DOM elements matched by the CSS selector and allows you to transform them
 	 */
-	def protected select(String selector) {
+	def protected select(CharSequence selector) {
 		transformation.select(selector)
 	}
 	

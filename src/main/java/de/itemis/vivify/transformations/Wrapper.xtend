@@ -9,7 +9,7 @@ class Wrapper implements Transformation{
 	private CharSequence tag
 
 	override transform(Element input) {
-		input.wrap('''<«getTag»></«getTag»>''')
+		input.wrap('''<«tag»></«tag»>''')
 		newArrayList(input)
 	}
 	
